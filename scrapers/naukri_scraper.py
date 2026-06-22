@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 
 target_url="https://www.naukri.com/data-analyst-jobs"
 
-def scrape_naukri_pages(base_url, total_pages=3, delay_seconds=5):
+def scrape_naukri_pages(base_url, total_pages=20, delay_seconds=8):
     print(f"Launching browser and navigating to : {base_url}")
 
     all_jobs = []
@@ -102,14 +102,19 @@ def parse_jobs(html_content):
         
     return scraped_jobs
 
-# --- Main Execution ---
+
 if __name__ == "__main__":
     # 1. Scrape multiple pages via Playwright
-    jobs_data = scrape_naukri_pages(target_url, total_pages=3, delay_seconds=5)
+    jobs_data = scrape_naukri_pages(target_url, total_pages=20, delay_seconds=5)
 
     # 2. Save to Pandas DataFrame and Export
     if jobs_data:
         df = pd.DataFrame(jobs_data)
+        from datetime import datetime
+        before = len(df)
+        df = df.drop_duplicates(subset=['job_id'])
+        after = len(df)
+        df['date_scraped'] = datetime.now().strftime('%Y-%m-%d')
         print("\n Preview of Extracted Data:")
         print(df.head())
         
