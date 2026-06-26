@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 from bs4 import BeautifulSoup 
-from playwright.sync_api import sync_playwrigh
+from playwright.sync_api import sync_playwright
 
 target_url="https://www.naukri.com/data-analyst-jobs"
 
