@@ -6,7 +6,7 @@ import os
 os.makedirs('data', exist_ok=True)
 
 #Loading csv raw file
-csv_file='data/naukri_data_analyst_jobs.csv'
+csv_file='data/all_market_data_raw.csv'
 print(f"[*] Loading raw data from {csv_file}...")
 
 try:
@@ -107,6 +107,6 @@ print(f"    Min     : {cleaned_df['total_skills_found'].min()} skills in one job
 print(f"    Jobs with 0 skills matched: {(cleaned_df['total_skills_found'] == 0).sum()}")
 
 # Save the DataFrame with extracted skills
-output_file = "data/naukri_jobs_with_skills.csv"
+output_file = "data/all_market_data_with_skills.csv"
 cleaned_df.to_csv(output_file, index=False)
 print(f"\n[*] Saved dataset with skill flags to {output_file}")
