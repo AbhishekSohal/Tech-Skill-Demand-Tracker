@@ -32,7 +32,7 @@ def scrape_foundit(base_url, max_jobs=300, delay_seconds=2):
             max_scroll_attempts = 100
             consecutive_no_new = 0
 
-            # --- THE FIX: Target the scrollable list container ---
+            
             # We hover over the first job card to ensure the mouse is positioned 
             # over the left-hand list panel before we start scrolling.
             first_card = page.query_selector('div.cardContainer')
@@ -76,7 +76,7 @@ def scrape_foundit(base_url, max_jobs=300, delay_seconds=2):
                         print("5 consecutive scrolls with no new cards — stopping")
                         break
                     
-                    # --- THE FIX: Scroll while hovering over the list ---
+                   
                     page.mouse.wheel(0, 2000)
                     page.wait_for_timeout(3000)
                     # ----------------------------------------------------
