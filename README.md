@@ -36,31 +36,50 @@ An automated data pipeline that scrapes real-time Data Analyst job postings from
 
 ## 📁 Project Structure
 
+```text
 Tech-Skill-Demand-Tracker/
 │
 ├── scrapers/
-│ ├── naukri_scraper.py # Naukri.com scraper (Playwright + BS4)
-│ ├── foundit_scraper.py # Foundit.in scraper (Playwright + BS4)
-│ ├── run_all_scrapers.py # Master pipeline runner
-│ ├── skill_extracter.py # Regex skill extraction
-│ └── scheduler.py # Automated weekly scheduling
+│   ├── naukri_scraper.py       # Naukri.com scraper (Playwright + BS4)
+│   ├── foundit_scraper.py      # Foundit.in scraper (Playwright + BS4)
+│   ├── run_all_scrapers.py     # Master pipeline runner
+│   ├── skill_extracter.py      # Regex skill extraction
+│   └── scheduler.py            # Automated weekly scheduling
 │
 ├── notebook/
-│ └── market_analysis.ipynb # Full EDA and analysis
+│   └── market_analysis.ipynb   # Full EDA and analysis
 │
 ├── dashboard/
-│ ├── dashboard_overview.png # Power BI dashboard screenshot
-│ ├── dashboard_detail.png # Detailed view screenshot
-│ └── Tech_skill_demand_dashboard.pdf # Full dashboard PDF
+│   ├── dashboard_overview.png
+│   ├── dashboard_detail.png
+│   ├── Tech_skill_demand_dashboard.pbix # Power BI source file
+│   └── Tech_skill_demand_dashboard.pdf    # Full dashboard PDF
 │
 ├── data/
-│ └── data_source.md # Dataset description
+│   ├── all_market_data_raw.csv
+│   ├── all_market_data_with_skills.csv
+│   ├── core_vs_emerging.png
+│   ├── foundit_data_analyst_jobs.csv
+│   ├── naukri_data_analyst_jobs.csv
+│   ├── naukri_jobs_with_skills.csv
+│   ├── skill_by_city.png
+│   ├── skill_by_experience.png
+│   ├── skill_cooccurrence_heatmap.png
+│   ├── skill_experience_correlation.png
+│   ├── skill_profiles.png
+│   ├── skill_seniority_profile.png
+│   ├── source_comparison.png
+│   ├── top_skills_demand.png
+│   └── top_skill_pairs.png
 │
 ├── utils/
+│   └── merge_data.py
 │
+├── requirements.txt
 ├── .gitignore
 ├── LICENSE
 └── README.md
+```
 
 
 ---
