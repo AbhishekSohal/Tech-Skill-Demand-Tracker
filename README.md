@@ -27,7 +27,7 @@ An automated data pipeline that scrapes real-time Data Analyst job postings from
 |---|---|
 | Web Scraping | Python, Playwright, BeautifulSoup |
 | Data Processing | Pandas, NumPy, Regex |
-| Analysis & EDA | Jupyter Notebook, Scipy |
+| Analysis & EDA | Jupyter Notebook |
 | Visualization | Matplotlib, Seaborn, Power BI |
 | Automation | Python Schedule library |
 | Version Control | Git, GitHub |
